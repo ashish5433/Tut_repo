@@ -1,0 +1,183 @@
+
+        body{
+            margin: 0;padding: 20px;
+            font-family: sans-serif;
+           
+           /* background:rgba(38, 185, 230, 0.838); */
+           background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        }
+        
+        
+        *{
+            box-sizing: border-box;
+        }
+        .table{
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+        .table td,.table th{
+            padding: 12px 15px;
+          
+            text-align: center;
+            font-size: 16px;
+        }
+        .table th{
+            background-color: darkblue;
+            color: aliceblue;
+
+        }
+        
+        
+        .btn{
+            background-color: rgba(0, 0, 255, 0.386);
+            height: 35px;
+            color: rgb(22, 42, 3);
+            border-radius: 16px ;
+            border: 1px solid red;
+        }
+        .btn:hover{
+            cursor: pointer;
+        }
+        .main{
+            position: relative;
+        }
+        #card{
+            position: absolute;
+            border-radius: 16px ;
+            border: 2px solid red;
+            width: 50%;
+            height: 80%;
+            background-color: rgba(242, 244, 236, 0.856);
+            top: 12vh;
+            left: 25vw;
+            display: none;
+        }
+        #card2{
+            position: absolute;
+            border-radius: 50% ;
+            border: 2px solid red;
+            width: 50vh;
+            height: 50vh;
+            background-color: green;
+            top: 27vh;
+            left: 34vw;
+             display: none; 
+        }
+        #card3{
+            position: absolute;
+            border-radius: 12px ;
+            border: 2px solid red;
+            width: 50vh;
+            height: 50vh;
+            background-color: black;
+            top: 27vh;
+            left: 34vw;
+            display: none;
+        }
+        #cut{
+            position: absolute;
+            left: 95%;
+            top: 0vh;
+            color: rgb(73, 69, 69);
+            font-size: larger;
+        }
+        #cut:hover{
+            cursor: pointer;
+        }
+        @media only screen and (max-width:687px) and (min-width:570px) {
+            #card{
+            width: 83%;
+            left: 10vw;
+            height: 85%;
+            }
+        }
+        @media only screen and  (max-width:570px){
+            #card{
+            width: 83%;
+            left: 10vw;
+            height: 100%;
+            }
+        }
+        @media only screen and (min-width:688px) and (max-width:950px){
+            #card{
+            width: 70%;
+            left: 20vw;
+            height: 80%;
+            }
+        }
+
+        @media only screen and (max-width:850px) and (min-width:500px){
+            #card2{
+                left:16vw;
+                width: 40vh;
+                height: 40vh;
+            }
+            #card3{
+                left:16vw;
+                width: 40vh;
+                height: 40vh;
+            }
+        } @media only screen and (max-width:600px) {
+            #card2{
+                left:19vw;
+                width: 30vh;
+            height: 30vh;
+            }
+            #card3{
+                left:19vw;
+                width: 30vh;
+            height: 30vh;
+            }
+        }
+       
+   #des{
+    color:rgb(42, 45, 94);
+    position: relative;
+    text-align: center;
+   }
+
+   #tranc{
+    color: blueviolet;
+    position: relative;
+    text-align: center;
+   }
+   #name_mera{
+    margin: 10px;
+    padding: 4px;
+   }
+   #age_mera{
+    margin-bottom: 10px;
+   }
+   #trbtn{
+    background-color: rgb(47, 46, 46);
+    color: rgb(49, 228, 49);
+    width: 6rem;
+    height: 5vh;
+    font-weight: bolder;
+    border-radius: 5px;
+   }
+   .lbl{
+    font-size: x-large;
+   }
+
+   #trbtn:hover{
+    cursor: pointer;
+    background-color: black;
+   }
+
+
+   
+   .card2 {
+    width:60%;
+    height:300px;
+    background-color: green;
+}
+#img {
+    width:100%;
+    height:100%;
+    border-radius: 16px;
+    object-fit:cover;
+}
+  

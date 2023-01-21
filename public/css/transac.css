@@ -1,0 +1,22 @@
+body{
+    position: relative;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(32,32,165,1) 0%, rgba(0,212,255,1) 100%);
+} 
+
+.main{
+    
+    padding: 3rem;
+    color: white;
+}
+.main th{
+    color: darkgreen;
+    
+}
+th{
+    padding: 0px 0px 0px 50px;
+}
+table{
+    box-shadow: rgb(77, 62, 38) 0px 20px 30px -10px;
+    border-radius: 2px solid green;
+}

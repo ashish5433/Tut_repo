@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+    <title>Customers</title>
+    <link rel="stylesheet" href="css/table_style.css">
+</head>
+<body>
+   
+    <div class="main">
+        <div id="card2">
+            <h1 id="cut" onclick="cut()">X</h1>
+            <img src="check4.png" alt="" id="img">
+        </div>
+        <div id="card3">
+            <h2 style="color: white;padding:5rem 3.5rem;font-size:3rem">Loading...</h2>
+        </div>
+        <div id="card">
+            <h1 id="cut" onclick="cut()">X</h1>
+            <center><h1 style="color: white; padding: 0 5px; background-color:black">Your's Detailed Information</h1></center>
+            <div id="des">
+           <h2>Hello</h2><h2 id="name"></h2>
+           <h3 id="email_id"></h3>
+           <h3 id="acnt_num"></h3>
+           
+           <h3 id="act">Your Account balance is </h3><h3 id="amnt"></h3>
+          
+            
+            </div>
+            <h4 style="color:chocolate">Do Tranfer Smoothly With Us....</h4>
+            <div id="tranc">
+               
+            <label for="name_mera" class="lbl">Choose a person to transfer:</label>
+         <select id="name_mera" name="name_mera">
+        <option value="">Select Person</option>
+        <option value="Ashish">Ashish</option>
+        <option value="Ayush">Ayush</option>
+        <option value="Abhinash">Abhinash</option>
+        <option value="Om">Om</option>
+        <option value="Harsh">Harsh</option>
+        <option value="Milind">Milind</option>
+        <option value="Protyay">Protyay</option>
+        <option value="Rishav">Rishav</option>
+        <option value="Shaswat">Shaswat</option>
+        <option value="Lakshay">Lakshay</option>
+        </select><br>
+        <label for="age_mera" class="lbl">Enter Amount (in INR)     </label>
+        <input name="first" id="age_mera"/><br>
+        <button onclick="checkbal()" id="trbtn">Transact</button>
+        </div>
+        </div>
+       
+    <table class="table">
+        <thead>
+            <th>Name </th>
+            <th>Email Add.</th>
+            <th>  </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Name">{{name1}}</td>
+                <td data-label="Email Add.">{{Email1}}</td>
+                <td ><button class="btn" onclick="dis('{{name1}}','{{Email1}}','{{num1}}','{{amnt1}}')">View More</button></td>
+            </tr>
+            <tr> <td data-label="Name">{{name2}}</td>
+                <td data-label="Email Add.">{{Email2}}</td>
+                <td ><button class="btn" onclick="dis('{{name2}}','{{Email2}}','{{num2}}','{{amnt2}}')">View More</button></td></tr>
+            <tr> 
+                <td data-label="Name">{{name3}}</td>
+                <td data-label="Email Add.">{{Email3}}</td>
+                <td ><button class="btn" onclick="dis('{{name3}}','{{Email3}}','{{num3}}','{{amnt3}}')">View More</button></td>
+            </tr>
+            <tr> 
+                <td data-label="Name">{{name4}}</td>
+                <td data-label="Email Add.">{{Email4}}</td>
+                <td ><button class="btn" onclick="dis('{{name4}}','{{Email4}}','{{num4}}','{{amnt4}}')">View More</button></td>
+            </tr>
+            <tr>  <td data-label="Name">{{name5}}</td>
+                <td data-label="Email Add.">{{Email5}}</td>
+                <td ><button class="btn" onclick="dis('{{name5}}','{{Email5}}','{{num5}}','{{amnt5}}')">View More</button></td></tr>
+            <tr> 
+                <td data-label="Name">{{name6}}</td>
+                <td data-label="Email Add.">{{Email6}}</td>
+                <td ><button class="btn" onclick="dis('{{name6}}','{{Email6}}','{{num6}}','{{amnt6}}')">View More</button></td>
+            </tr>
+            <tr> 
+                <td data-label="Name">{{name7}}</td>
+                <td data-label="Email Add.">{{Email7}}</td>
+                <td ><button class="btn" onclick="dis('{{name7}}','{{Email7}}','{{num7}}','{{amnt7}}')">View More</button></td>
+            </tr>
+            <tr> 
+                <td data-label="Name">{{name8}}</td>
+                <td data-label="Email Add.">{{Email8}}</td>
+                <td ><button class="btn" onclick="dis('{{name8}}','{{Email8}}','{{num8}}','{{amnt8}}')">View More</button></td>
+            </tr>
+            <tr> 
+                <td data-label="Name">{{name9}}</td>
+                <td data-label="Email Add.">{{Email9}}</td>
+                <td ><button class="btn" onclick="dis('{{name9}}','{{Email9}}','{{num9}}','{{amnt9}}')">View More</button></td>
+            </tr>
+            <tr> 
+                <td data-label="Name">{{name10}}</td>
+                <td data-label="Email Add.">{{Email10}}</td>
+                <td ><button class="btn" onclick="dis('{{name10}}','{{Email10}}','{{num10}}','{{amnt10}}')">View More</button></td>
+            </tr>
+           
+        </tbody>
+    </table>
+    </div>
+</body>
+<script >
+    const checkbal=()=>{
+    const name1=document.getElementById('name').innerText;
+    const suc = document.getElementById('card2').style;
+    const suc2 = document.getElementById('card3').style;
+    const suc1 = document.getElementById('card').style;
+    const age1 = document.getElementById('amnt').innerText;
+	const up_name = document.getElementById('name_mera').value;
+	const up_age = document.getElementById('age_mera').value;
+   
+	if(up_name.length==0 || up_age.length==0){
+        alert("Required Feild.....")
+    }
+    else if(up_age>=Number(age1)){
+        alert("Insufficient Balance....")
+       
+    }
+    else {
+       
+        axios.post('/',{
+		name:up_name,
+		age:up_age,
+        name1:name1
+	})
+	.then(function (response) {
+
+    console.log(response);
+ })
+ suc2.display="block";
+ suc1.display="none";
+
+ setTimeout(myfun,2000);
+ function myfun(){
+    suc2.display="none";
+    suc.display="block";
+ }
+
+
+    }
+   }
+    const dis=(x,y,a,b) =>{
+        var text1="Hello...";
+        text1=text1.concat(x);
+        var text2= "Your account number is ";text2=text2.concat(a);
+        var text3= "Your have INR ";text3=text3.concat(b);
+        var text4= "Your Email Id : ";text4=text4.concat(y);
+        document.getElementById('card').style.display="block";
+        document.getElementById('name').innerHTML=x; 
+        document.getElementById('amnt').innerHTML=b; 
+        document.getElementById('acnt_num').innerHTML=text2; 
+        document.getElementById('email_id').innerHTML=text4; 
+    }
+    const cut= ()=>{
+         document.getElementById('card').style.display="none";
+         document.getElementById('card2').style.display="none";
+}
+   
+    
+ 
+</script>
+</html>
